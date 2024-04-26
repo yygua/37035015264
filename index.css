@@ -1,0 +1,160 @@
+   /***头部导航样式开始****/
+    .headbar{
+    	position: fixed;
+		top: 0;
+		left: 0; 
+		width: 100%;
+		height:44px ;
+		line-height: 44px;
+		z-index: 99;
+		background-color: #1891FD; 
+		border-bottom: 1px solid #CCCCCC;
+    }   
+    /***按钮图标样式*/ 
+    .headbar .head_btn{
+        position: absolute;
+        left: 6px;
+        top: 5px;
+    	width: 32px;
+    	height: 32px;
+	    text-decoration: none;
+    	border: 0px solid red;
+    }
+    .headbar .head_btn img{width: 20px;margin-top: 8px;}
+    /***标题样式****/
+    .headbar .head_title{
+	    display: block;
+	    width: auto;
+	    margin: 0 auto;
+	    text-align: center;
+	    font-family:"微软雅黑";
+	    font-size: 18px;
+	    color: #fff;
+	    font-weight: bold;
+	    border: 0px solid red;
+    }
+   .headbar .title_left{
+    	text-align:left;
+		padding-left: 10px;
+    }
+    
+
+/*信息列表*/
+.form_list{overflow: hidden;margin-top:50px;}
+.form_list .row {width: 99%;min-height:50px;background: #fff;position: relative;}
+.form_list .row:after{position: absolute;left: 10px;bottom:0px;right:0px;height: 1px;content: '';background: #EDEDED;}
+.form_list .list{position: relative;}
+.form_list .list:before{position: absolute;left: 4px;top:-1px;right:0px;height: 1px;content: '';background: #EDEDED;}
+.form_list .list:after{position: absolute;left: 0px;bottom:0px;right:0px;height: 1px;content: '';background: #EDEDED;}
+
+.form_list .caption {width:70px;text-align: left;height: 30px;line-height: 30px;font-size: 18px;font-weight: 500;color: #333333;margin-top:12px;margin-left: 10px;}
+.form_list .row .button{min-width: 45px;height: 30px;line-height: 30px;padding:0px 5px;	text-align: center;background-color: darkseagreen;border-radius:2px;}
+.form_list .icon {width:20px;}
+.form_list .icon.icon-top{margin-top: 16px;width:22px;margin-right: 6px;}
+.fleft {float: left;margin-right:0px;}
+.fright {float: right;margin-left:4px;}
+.form_list .content {border: 0px solid #ccc;border-radius:2px;min-height:30px;overflow: hidden;position: relative;}
+.form_list .content img{width:18px;position: absolute;right: 4px;}		
+.form_list .content .inputborder {margin-top:12px;}
+.form_list .content .inputborder input {width: 100%;border: none;outLine: none;background: #fff;text-indent:0px;height:24px;line-height: 20px;font-size: 16px;color: #555555;margin-bottom:10px;padding-left: 10px;}
+.form_title{color: #333333;line-height:40px;text-indent:10px;font-size: 16px;}
+.select-ellipsis{overflow: hidden; white-space: nowrap;text-overflow: ellipsis;color: #333333 !important;margin-right:30px;}
+.list-box{background: #fff;text-align: left;padding: 15px 10px;padding-left:10px; line-height:20px;color: #999999;overflow: hidden;}
+.list-info{overflow: hidden;}
+
+.verti-ban{padding: 0px !important;}
+.verti-ban-pic{width: 100% !important;} 
+.yanzm{width:50px !important;margin-top: 10px !important;}
+.verti-caption{width: 60px !important;}
+.verti-form .content .inputborder{padding-top:2px !important;margin-right: 24px;}
+
+.mui-input-row{float: left !important;width: 49% !important;height: 50px;line-height: 50px; clear: right;}
+.mui-checkbox input[type=checkbox], .mui-radio input[type=radio]{top:12px;}
+.mui-checkbox input[type=checkbox]:before, .mui-radio input[type=radio]:before{font-size: 24px;}
+.mui-checkbox.mui-left input[type=checkbox], .mui-radio.mui-left input[type=radio]{left: 20px;}
+/*按钮*/
+.btn {
+	position: absolute;right: 4px;top:6px;
+	outline-style: none;
+	border-radius: 4px;
+	background-image: none;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	border: none;
+	height: 32px;
+	line-height:32px;
+	padding: 0px 18px;
+	font-size: 16px;
+	background-color:#009688;
+	color: #ffffff;
+	margin:0px 7px 10px 0px;
+	cursor: pointer;
+	outline: none;
+	/* ie6/ie7 inline-block hack */
+	*zoom: 1;
+	*display: inline;
+
+}	
+/*按钮样式*/
+.btn-primary{border:1px solid #c9c9c9;color: #555555;background-color: #ffffff;}
+.btn-linear{border:1px solid #1492FF;color: #1492FF;background-color: #ffffff;}
+.btn-normal{background-color:#1E9FFF}
+.btn-success{background-color:#48AE48}
+.btn-warm{background-color:#FFB800}
+.btn-danger{background-color:#FF5722}
+.btn-disabled{border:1px solid #e6e6e6; background-color:#FBFBFB;color: #C9C9C9;cursor: not-allowed;opacity: 1;}
+
+/*按钮大小*/
+.btn-lg{height: 44px;line-height: 44px;padding: 0px 60px;font-size: 16px;	*padding: 0px 18px;}    /*大按钮*/
+.btn-sm{height:30px;line-height:30px;padding: 0px 10px;font-size: 12px;}      /*小型按钮*/
+.btn-xs{height:22px;line-height:22px;padding: 0px 5px;font-size: 12px;}      /*迷你按钮*/
+
+.btn:active{color: #0F69AD;border:1px solid #0F69AD; background: transparent !important;} 
+
+.search-btn{width: 90%;height: 44px;line-height:44px;text-align:center;margin: 0 auto;font-size: 20px;border-radius:22px;margin-top:100px;margin-bottom:40px;} 
+.bg-blue{background: #1891FD;color: #fff;}
+.bg-blue:hover{background: #3EA3FE;}
+
+.query-content .form_list{margin-top:44px;} 
+.query-content .form_list .list{border:1px solid #E3E3E3;margin: 50px 6px;border-radius: 4px;background: #ffffff;}
+
+.mui-radio label{font-size:16px;line-height:24px}
+
+.verti-content .order-complete-info{overflow: hidden;text-align: left;padding:20px 4px 0px 14px; clear: both}
+.verti-content .order-complete-info span.fl{margin-right: 6px;font-size: 16px;color: #262626;}
+.verti-content .order-complete-info p{font-size: 16px;color: #333333;line-height:20px;}
+.verti-content .info-color{color: #666666;}    
+.verti-content .info-active{color: #ff961a !important;}   
+.verti-content .info-overflow{overflow: hidden;display: block;}
+.list-info{overflow: hidden;font-size: 16px;line-height: 20px;}
+.list-title{font-weight: bold;font-size: 18px;}
+.btn_box{margin-top: 10px;padding: 0px;}
+.btn_box ul li{width: 30%;float: left;}
+.chuxi_btn{overflow: hidden;height:38px;line-height: 38px; text-align: center;margin-right:4px; color: #fff; background: #F3980F;border-bottom-left-radius:6px;border-bottom-right-radius:6px;}
+.chuxi_btn:active{background: #F98500;}
+.chuxi_btn img,.zhuijia_btn img{width:20px;vertical-align: middle;margin-top:-4px;}
+.zhuijia_btn{height: 38px;line-height: 38px;margin-right:4px;text-align: center;color: #fff; background: #29A8F2 ;border-bottom-left-radius:6px;border-bottom-right-radius:6px;}
+.zhuijia_btn:active{background: #0B91F4;}
+
+.tel-pop{height:160px;position: fixed;bottom: 0px;left: 0px;right: 0px;z-index: 999;display: none;}
+.tel-pop ul li{height: 40px;line-height: 40px;text-align: center;border-radius: 4px;margin:10px;background: #ffffff;}
+
+.map_index{
+	border-radius: 50%;
+	width: 30px;
+	margin: 10 0 0 10;
+	height: 30px;
+	line-height: 30px;
+	background-color: #f3980f;
+	color: white;
+	text-align: center;
+	font-size: large;
+	vertical-align: bottom;
+	float: left;
+}
+.map_zh{
+	line-height: 30px;
+	padding: 10 0 0 20;
+}

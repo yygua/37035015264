@@ -1,0 +1,112 @@
+/**
+ * Created by zhengjunhang on 2018/3/29.
+ */
+/**
+ * 查看宗地图和分户地图
+ * @param bdcdyh
+ * @param phoneNum
+ * @param type
+ */
+var layer;
+layui.use('layer', function () {
+    layer = layui.layer;
+});
+
+function preViewMap(bdcdyh, bsm, phoneNum, fdtype) {
+    layer.msg('请稍候...', {icon: 16, time: -1, shade: 0.3});
+    var url = path + "/user/checkImage?bdcdyh=" + bdcdyh + "&phoneNum=" + phoneNum + "&fdtype=" + fdtype + "&bsm=" + bsm;
+    $.ajax({
+        type: 'POST',
+        url: url,
+        async: true,
+        dataType: 'json',
+        success: function (result) {
+            debugger;
+            var code = result.code;
+            if (code == 0) {
+                window.location.href = path + "/user/showImage?bdcdyh=" + bdcdyh + "&phoneNum=" + phoneNum + "&fdtype=" + fdtype + "&bsm=" + bsm;
+                layer.closeAll();
+            } else {
+                layer.closeAll();
+                layer.msg("正在制图中");
+            }
+        }, error: function (data) {
+            debugger;
+            layer.closeAll();
+            layer.msg("正在制图中");
+            return false;
+        }
+    })
+}
+
+function swPreViewMap(bdcdyh, zl, fdtype) {
+    layer.msg('请稍候...', {icon: 16, time: -1, shade: 0.3});
+    var url = path + "/user/swCheckImage";
+    var object = new Object();
+    object.zl = zl;
+    object.bdcdyh = bdcdyh;
+    object.fdtype = fdtype;
+    $.ajax({
+        type: 'POST',
+        url: url,
+        async: true,
+        data:JSON.stringify(object),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            debugger;
+            var code = result.code;
+            if (code == 0) {
+                window.location.href = path + "/user/swShowImage?bdcdyh=" + bdcdyh + "&fdtype=" + fdtype ;
+                layer.closeAll();
+            } else {
+                layer.closeAll();
+                layer.msg("正在制图中");
+            }
+        }, error: function (data) {
+            debugger;
+            layer.closeAll();
+            layer.msg("正在制图中");
+            return false;
+        }
+    })
+}
+
+
+function viewDyInfo(qlbsm, dybsm, dybm) {
+    var $dyInfoTd = $('#dyInfo');
+    var sfDyInfo = $('#sfDyInfo').val();
+    var sfDyInfoHistory = $('#sfDyInfoHistory').val();
+    $(".dyinfo").remove();
+    if (sfDyInfo == "true") {
+        $.ajax({
+            type: "get",
+            url: path + "/user/getDyxxList?qlbsm=" + qlbsm + "&dybsm=" + dybsm + "&dybm=" + dybm,
+            // url: path + "/user/getDyxxList?dybsm=1560191&dybm=H&qlbsm=6051684",
+            success: function (res) {
+                debugger
+                var resList = JSON.stringify(res);
+                var list = eval(resList);
+                var resultList = new Array();
+                //判断是否需要过滤历史数据
+                if (sfDyInfoHistory == "false") {
+                    for (var i = 0; i < list.length; i++) {
+                        if (list[i].zt == "正式") {
+                            resultList.push(list[i]);
+                        }
+                    }
+                } else {
+                    resultList = list;
+                }
+                for (var i = 0; i < resultList.length; i++) {
+                    var _dyinfo = "<p class='dyinfo'>登记时间：" + resultList[i].dbsj + "  "
+                        + "抵押权利人："+ resultList[i].qlr +"  "
+                        + "债权数额："+ resultList[i].zqse +"万元  "
+                        + "抵押期限至："+ resultList[i].tdqljssj +"  "
+                        + "</p>";
+                    $dyInfoTd.append(_dyinfo);
+                }
+            }
+        });
+    }
+}

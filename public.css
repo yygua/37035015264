@@ -1,0 +1,97 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #555;
+    background: #efeff4;
+}
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.cl {
+	clear: both;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #4C4C4C;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+
+/***通知列表按钮图标颜色****/
+.bgcolor1 {
+    background: #9a2122;
+}
+
+.bgcolor2 {
+	background: #ee7c00;
+}
+
+.bgcolor3 {
+	background: #8abc1c;
+}
+
+.bgcolor4 {
+	background: #ff9622;
+}
+
+.bgcolor5 {
+	background: #218fc0;
+}
+
+.bgcolor6 {
+	background: #6a51a5;
+}
+
+.bgcolor7 {
+	background: #0f69ad;
+}
+
+.bgcolor8 {
+	background: #8cc84c;
+}
+
+.bgcolor9 {
+	background: #099d75;
+}
+
+.bgcolor10 {
+	background: #ee4440;
+}
+
+.bgcolor11 {
+	background: #3aadff;
+}
+
+.bgcolor12 {
+	background: #6cc56e;
+}
+ img{border: none;}
+
+ /*取消默认选择事件样式*/
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+ a,input,li,span{-webkit-tap-highlight-color:rgba(0,0,0,0);}
